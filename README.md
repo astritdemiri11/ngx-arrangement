@@ -1,6 +1,6 @@
 # ngx-arrangement
 
-Lazy load, responsive and server side html rendering library for Angular.
+Lazy load, responsive and server side (angular universal) html rendering library for Angular.
 
 Official documentation: https://astritdemiri.com/ng-library/ngx-arrangement
 
@@ -14,7 +14,10 @@ Get the complete changelog here: https://github.com/astritdemiri11/ngx-arrangeme
   * [Import the TranslateModule](#1-import-the-translatemodule)
     * [SharedModule](#sharedmodule)
   * [Use the service, the pipe or the directive](#use-the-service-the-pipe-the-component-or-the-directive)
-
+* [API](#api)
+  * [LayoutService](#layoutservice)
+    * [Properties](#properties)
+    * [Methods](#methods)
 
 ## Installation
 
@@ -71,4 +74,52 @@ export class SharedModule { }
 
 #### Use the service, the pipe, the component or the directive:
 
-You can either use the `LayoutService`, the `VirtualLoadComponent`, the `ServerSideDirective` or the `ServerSideRenderDirective` to get your translation values
+You can either use the `LayoutService`, the `VirtualLoadComponent`, the `ServerSideDirective` or the `ServerSideRenderDirective` exported by library
+
+This is how you use the **component** for rendering only if visible in screen:
+```html
+<virtual-load>
+  <ng-template loadContent>
+    Your content goes here
+  </ng-template>
+</virtual-load>
+```
+
+
+This is how you use the **directive** to configure if html should be rendered in server:
+```html
+<div *serverSideRender="false"></div>
+```
+
+This is how you use the **directive** to configure server side styles:
+```html
+<div serverSide ssStyle="zIndex: -1"></div>
+```
+
+## API
+
+### LayoutService
+
+#### Properties:
+
+- `model.isBrowser`: Return a boolean that detects if app is executed in browser or server.
+- `model.handset$`: Observer that detects if app is desktop or mobile version.
+
+    example:
+    ```ts
+    model.handset$.subscribe((handset: boolean) => {
+	  // do something
+	});
+    ```
+- `model.resize$`: Observer that detects window resize.
+
+    example:
+    ```ts
+    model.resize$.subscribe((event: Event) => {
+	  // do something
+	});
+    ```
+#### Methods:
+
+- `isHandset(lang: string)`: Sets the default language to use as a fallback
+- `setServerHandset(): string`: Gets the default language
