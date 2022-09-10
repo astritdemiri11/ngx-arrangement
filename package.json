@@ -1,7 +1,7 @@
 {
   "name": "ngx-arrangement",
-  "version": "0.0.2",
-  "description": "Angular library that simplifies lazy load, responsive and server side html (inc. angular features) rendering",
+  "version": "0.0.4",
+  "description": "Lazy load, responsive and server side html rendering library for Angular",
   "keywords": [
     "server side",
     "lazy load",
@@ -20,6 +20,9 @@
   },
   "bugs": {
     "url": "https://github.com/astritdemiri11/ngx-arrangement/issues"
+  },
+  "release": {
+    "repositoryUrl": "https://github.com/astritdemiri11/ngx-arrangement/releases"
   },
   "homepage": "https://astritdemiri.com/ng-library/ngx-arrangement",
   "license": "MIT",

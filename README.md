@@ -1,24 +1,72 @@
-# NgxArrangement
+# ngx-arrangement [![Build Status](astrit)](https://astritdemiri.com/ng-library/ngx-arrangement/build)
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
+Lazy load, responsive and server side html rendering library for Angular.
 
-## Code scaffolding
+Simple example using ngx-arrangement: https://stackblitz.com/github/astritdemiri11/ngx-arrangement-example
 
-Run `ng generate component component-name --project ngx-arrangement` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-arrangement`.
-> Note: Don't forget to add `--project ngx-arrangement` or else it will be added to the default project in your `angular.json` file. 
+Get the complete changelog here: https://github.com/astritdemiri11/ngx-arrangement/releases
 
-## Build
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+  * [Import the TranslateModule](#1-import-the-translatemodule)
+    * [SharedModule](#sharedmodule)
+  * [Use the service, the pipe or the directive](#use-the-service-the-pipe-the-component-or-the-directive)
 
-Run `ng build ngx-arrangement` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Publishing
+## Installation
 
-After building your library with `ng build ngx-arrangement`, go to the dist folder `cd dist/ngx-arrangement` and run `npm publish`.
+First you need to install the npm module:
 
-## Running unit tests
+```sh
+npm install ngx-arrangement --save
+```
 
-Run `ng test ngx-arrangement` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Choose the version corresponding to your Angular version:
 
-## Further help
+ Angular       | ngx-arrangement
+ ------------- | ---------------
+ 14 (ivy only) | 1.x+           
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Usage
+
+#### 1. Import the `ArrangementModule`:
+
+Finally, you can use ngx-arrangement in your Angular project. You have to import `ArrangementModule` in the root NgModule of your application.
+
+```ts
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {ArrangementModule} from 'ngx-arrangement';
+
+@NgModule({
+    imports: [
+        BrowserModule,
+        ArrangementModule
+    ],
+    bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+##### SharedModule
+
+If you use a [`SharedModule`](https://angular.io/guide/sharing-ngmodules) that you import in multiple other feature modules,
+you can export the `ArrangementModule` to make sure you don't have to import it in every module.
+
+```ts
+@NgModule({
+    exports: [
+        CommonModule,
+        ArrangementModule
+    ]
+})
+export class SharedModule { }
+```
+
+> Note: Module services are provided in root `@Injectable({ providedIn: 'root' })`, see [`Dependency Injection`](https://angular.io/guide/dependency-injection).
+
+#### Use the service, the pipe, the component or the directive:
+
+You can either use the `LayoutService`, the `VirtualLoadComponent`, the `ServerSideDirective` or the `ServerSideRenderDirective` to get your translation values

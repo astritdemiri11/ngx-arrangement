@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { VirtualLoadComponent } from './components/virtual-load/virtual-load.component';
 import { LoadContentDirective } from './directives/load-content/load-content.directive';
@@ -23,17 +23,4 @@ import { ServerSideDirective } from './directives/server-side/server-side.direct
     LoadContentDirective
   ]
 })
-export class NgxArrangementModule {
-  static forRoot(): ModuleWithProviders<NgxArrangementModule> {
-
-    return {
-      ngModule: NgxArrangementModule
-    }
-  }
-
-  static forChild(): ModuleWithProviders<NgxArrangementModule> {
-    return {
-      ngModule: NgxArrangementModule
-    }
-  }
- }
+export class ArrangementModule { }
