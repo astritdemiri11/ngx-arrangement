@@ -1,0 +1,35 @@
+{
+  "name": "ngx-arrangement",
+  "version": "0.0.2",
+  "description": "Angular library that simplifies lazy load, responsive and server side html (inc. angular features) rendering",
+  "keywords": [
+    "server side",
+    "lazy load",
+    "responsive",
+    "render",
+    "angular"
+  ],
+  "author": {
+    "name": "Astrit Demiri",
+    "email": "astritdemiri11@gmail.com",
+    "url": "https://astritdemiri.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/astritdemiri11/ngx-arrangement.git"
+  },
+  "bugs": {
+    "url": "https://github.com/astritdemiri11/ngx-arrangement/issues"
+  },
+  "homepage": "https://astritdemiri.com/ng-library/ngx-arrangement",
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/cdk": "^14.1.1",
+    "@angular/common": "^14.1.1",
+    "@angular/core": "^14.1.1",
+    "rxjs": "^7.5.6"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

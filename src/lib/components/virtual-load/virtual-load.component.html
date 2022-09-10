@@ -1,0 +1,9 @@
+<ng-container *ngIf="show">
+  <ng-container *ngIf="contentTemplate; eagerLoad">
+    <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+  </ng-container>
+
+  <ng-template #eagerLoad>
+    <ng-content select="[loadContent]"></ng-content>
+  </ng-template>
+</ng-container>
