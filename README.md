@@ -1,6 +1,8 @@
-# ngx-arrangement [![Build Status](astrit)](https://astritdemiri.com/ng-library/ngx-arrangement/build)
+# ngx-arrangement
 
 Lazy load, responsive and server side html rendering library for Angular.
+
+Official documentation: https://astritdemiri.com/ng-library/ngx-arrangement
 
 Simple example using ngx-arrangement: https://stackblitz.com/github/astritdemiri11/ngx-arrangement-example
 
@@ -42,8 +44,8 @@ import {ArrangementModule} from 'ngx-arrangement';
 
 @NgModule({
     imports: [
-        BrowserModule,
-        ArrangementModule
+        ArrangementModule,
+        BrowserModule
     ],
     bootstrap: [AppComponent]
 })
@@ -58,8 +60,8 @@ you can export the `ArrangementModule` to make sure you don't have to import it 
 ```ts
 @NgModule({
     exports: [
-        CommonModule,
-        ArrangementModule
+        ArrangementModule,
+        CommonModule
     ]
 })
 export class SharedModule { }

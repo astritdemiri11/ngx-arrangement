@@ -1,6 +1,6 @@
 {
   "name": "ngx-arrangement",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Lazy load, responsive and server side html rendering library for Angular",
   "keywords": [
     "server side",
