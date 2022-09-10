@@ -11,7 +11,7 @@ Get the complete changelog here: https://github.com/astritdemiri11/ngx-arrangeme
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
-  * [Import the TranslateModule](#1-import-the-translatemodule)
+  * [Import the ArrangementModule](#1-import-the-arrangementmodule)
     * [SharedModule](#sharedmodule)
   * [Use the service, the pipe or the directive](#use-the-service-the-pipe-the-component-or-the-directive)
 * [API](#api)
