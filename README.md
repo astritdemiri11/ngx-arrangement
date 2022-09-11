@@ -102,8 +102,8 @@ This is how you use the **directive** to configure server side styles:
 
 #### Properties:
 
-- `model.isBrowser`: Return a boolean that detects if app is executed in browser or server.
-- `model.handset$`: Observer that detects if app is desktop or mobile version.
+- `model.isBrowser: boolean`: Detects if app is executed in browser or server.
+- `model.handset$: Observable<boolean>`: Detects if app is desktop or mobile version.
 
     example:
     ```ts
@@ -111,7 +111,7 @@ This is how you use the **directive** to configure server side styles:
 	  // do something
 	});
     ```
-- `model.resize$`: Observer that detects window resize.
+- `model.resize$: Observable<Event>`: Detects window resize.
 
     example:
     ```ts
@@ -121,5 +121,5 @@ This is how you use the **directive** to configure server side styles:
     ```
 #### Methods:
 
-- `business.isHandset()`:  Return a boolean that detects if app is executed in mobile or desktop
-- `business.setServerHandset(handset: boolean): string`: Set the mobile or desktop for server rendering.
+- `business.isHandset(): boolean`:  Detects if app is desktop or mobile version.
+- `business.setServerHandset(handset: boolean): void`: Sets the mobile or desktop for server rendering.
