@@ -121,5 +121,5 @@ This is how you use the **directive** to configure server side styles:
     ```
 #### Methods:
 
-- `isHandset()`:  Return a boolean that detects if app is executed in mobile or desktop
-- `setServerHandset(handset: boolean): string`: Set the mobile or desktop for server rendering.
+- `business.isHandset()`:  Return a boolean that detects if app is executed in mobile or desktop
+- `business.setServerHandset(handset: boolean): string`: Set the mobile or desktop for server rendering.
