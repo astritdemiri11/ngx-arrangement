@@ -121,5 +121,5 @@ This is how you use the **directive** to configure server side styles:
     ```
 #### Methods:
 
-- `isHandset(lang: string)`: Sets the default language to use as a fallback
-- `setServerHandset(): string`: Gets the default language
+- `isHandset()`:  Return a boolean that detects if app is executed in mobile or desktop
+- `setServerHandset(handset: boolean): string`: Set the mobile or desktop for server rendering.
